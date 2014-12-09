@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alex.wifidirectbusinesscards" >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.alex.wifidirectbusinesscards.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:enabled="true" android:name=".FileTransferService" />
+
+        <activity
+            android:name="com.example.alex.wifidirectbusinesscards.P2pConnectionActivity"
+            android:label="@string/title_activity_p2p_connection" >
+        </activity>
+        <activity
+            android:name="com.example.alex.wifidirectbusinesscards.ViewCardsListActivity"
+            android:label="@string/title_activity_view_cards_list" >
+        </activity>
+        <activity
+            android:name="com.example.alex.wifidirectbusinesscards.CreateNewCardActivity"
+            android:label="@string/title_activity_create_new_card"
+            android:noHistory="true">
+        </activity>
+        <activity
+            android:name="com.example.alex.wifidirectbusinesscards.ViewCard"
+            android:label="@string/title_activity_view_card"
+            android:screenOrientation="landscape"
+            android:noHistory="true">
+        </activity>
+    </application>
+
+</manifest>

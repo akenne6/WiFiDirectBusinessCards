@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wifi Direct Business Cards</string>
+    <string name="action_settings">Settings</string>
+    <string name="finding_service">Finding local services</string>
+    <string name="btn_send">Send</string>
+    <string name="title_activity_p2p_connection">P2pConnectionActivity</string>
+    <string name="title_activity_view_cards_list">ViewCardsListActivity</string>
+    <string name="title_activity_create_new_card">CreateNewCardActivity</string>
+
+    <string-array name="types_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="title_activity_view_card">ViewCard</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

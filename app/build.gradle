@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "com.example.alex.wifidirectbusinesscards"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'com.googlecode.ez-vcard:ez-vcard:0.9.6'
+}
