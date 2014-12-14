@@ -5,9 +5,10 @@
     <string name="action_settings">Settings</string>
     <string name="finding_service">Finding local services</string>
     <string name="btn_send">Send</string>
-    <string name="title_activity_p2p_connection">P2pConnectionActivity</string>
-    <string name="title_activity_view_cards_list">ViewCardsListActivity</string>
-    <string name="title_activity_create_new_card">CreateNewCardActivity</string>
+    <string name="title_p2pconnect_fragment">Send/Receive Card</string>
+    <string name="title_viewcardslist_fragment">List of Cards</string>
+    <string name="title_createnewcard_fragment">Create a New Card</string>
+    <string name="default_progress_text">Awaiting Connection</string>
 
     <string-array name="types_array">
         <item>Home</item>
@@ -18,5 +19,6 @@
 
     <string name="title_activity_view_card">ViewCard</string>
     <string name="hello_world">Hello world!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

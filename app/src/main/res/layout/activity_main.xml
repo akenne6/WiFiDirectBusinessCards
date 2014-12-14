@@ -9,27 +9,6 @@
         android:layout_height="match_parent"
         android:id="@+id/container_main"
         android:orientation="vertical">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:id="@+id/connectButton"
-            android:text="Send/Recieve Card"
-            android:onClick="ConnectDevices"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:id="@+id/viewCardsButton"
-            android:text="View Cards"
-            android:onClick="ViewCardsList"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:id="@+id/createButton"
-            android:text="Create New Card"
-            android:onClick="CreateCard"/>
     </LinearLayout>
 
 

@@ -82,9 +82,6 @@ public class P2pConnectionActivity extends Activity implements
     public static final String TXTRECORD_PROP_AVAILABLE = "available";
     public static final String SERVICE_INSTANCE = "_wifidemotest";
     public static final String SERVICE_REG_TYPE = "_presence._tcp";
-
-    public static final int MESSAGE_READ = 0x400 + 1;
-    public static final int MY_HANDLE = 0x400 + 2;
     private WifiP2pManager manager;
 
     static final int SERVER_PORT = 4545;
@@ -113,7 +110,7 @@ public class P2pConnectionActivity extends Activity implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_p2p_connection);
+        //setContentView(R.layout.activity_p2p_connection);
         statusTxtView = (TextView) findViewById(R.id.status_text);
 
         intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);

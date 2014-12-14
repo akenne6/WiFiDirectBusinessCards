@@ -59,7 +59,7 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         Log.d(P2pConnectionActivity.TAG, action);
         if (WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION.equals(action)) {
-
+            Log.d("WDBR", "Connection change received");
             if (manager == null) {
                 return;
             }

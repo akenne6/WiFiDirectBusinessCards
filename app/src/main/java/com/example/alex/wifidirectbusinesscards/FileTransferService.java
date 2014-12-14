@@ -28,8 +28,8 @@ import ezvcard.VCard;
  */
 public class FileTransferService extends IntentService {
 
-    private static final int SOCKET_TIMEOUT = 15000;
-    public static final String ACTION_SEND_FILE = "com.example.android.wifidirect.SEND_FILE";
+    private static final int SOCKET_TIMEOUT = 30000;
+    public static final String ACTION_SEND_FILE = "com.example.alex.wifidirectbusinesscards.SEND_FILE";
     public static final String EXTRAS_FILE_PATH = "file_url";
     public static final String EXTRAS_GROUP_OWNER_ADDRESS = "go_host";
     public static final String EXTRAS_GROUP_OWNER_PORT = "go_port";
@@ -51,7 +51,7 @@ public class FileTransferService extends IntentService {
 
         Context context = getApplicationContext();
         if (intent.getAction().equals(ACTION_SEND_FILE)) {
-            String cardNumber = intent.getExtras().getString(EXTRAS_FILE_PATH);
+            String FILE_NAME = intent.getExtras().getString(EXTRAS_FILE_PATH);
             String host = intent.getExtras().getString(EXTRAS_GROUP_OWNER_ADDRESS);
             Socket socket = new Socket();
             int port = intent.getExtras().getInt(EXTRAS_GROUP_OWNER_PORT);
@@ -60,16 +60,9 @@ public class FileTransferService extends IntentService {
                 Log.d("p2p", "Opening client socket - ");
                 socket.bind(null);
                 socket.connect((new InetSocketAddress(host, port)), SOCKET_TIMEOUT);
-
                 Log.d("p2p", "Client socket - " + socket.isConnected());
-                OutputStream stream = socket.getOutputStream();
-                //ContentResolver cr = context.getContentResolver();
-                InputStream is = null;
-                try {
-                    is = context.openFileInput("vcards.xml");
-                } catch (FileNotFoundException e) {
-                    Log.d("p2p", e.toString());
-                }
+                OutputStream stream = context.openFileOutput(FILE_NAME, MODE_APPEND);
+                InputStream is = socket.getInputStream();
                 P2pConnectionActivity.copyFile(is, stream);
                 Log.d("p2p", "Client: Data written");
             } catch (IOException e) {

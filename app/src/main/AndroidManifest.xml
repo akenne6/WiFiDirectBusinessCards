@@ -27,25 +27,6 @@
 
         <service android:enabled="true" android:name=".FileTransferService" />
 
-        <activity
-            android:name="com.example.alex.wifidirectbusinesscards.P2pConnectionActivity"
-            android:label="@string/title_activity_p2p_connection" >
-        </activity>
-        <activity
-            android:name="com.example.alex.wifidirectbusinesscards.ViewCardsListActivity"
-            android:label="@string/title_activity_view_cards_list" >
-        </activity>
-        <activity
-            android:name="com.example.alex.wifidirectbusinesscards.CreateNewCardActivity"
-            android:label="@string/title_activity_create_new_card"
-            android:noHistory="true">
-        </activity>
-        <activity
-            android:name="com.example.alex.wifidirectbusinesscards.ViewCard"
-            android:label="@string/title_activity_view_card"
-            android:screenOrientation="landscape"
-            android:noHistory="true">
-        </activity>
     </application>
 
 </manifest>
